@@ -14,7 +14,14 @@
 <p>Open the console (F12). Read and code inside the script.</p>
   <button id="btn4">Click Me</button>
   <span id="count">0</span>
-
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button id="greetBtn">ok</button>
+  <p id="result"></p>
+    <button id="colorBtn">Change Background</button>
+      <h2>What is 2 + 2?</h2>
+  <button id="btn1">3</button>
+  <button id="btn2">4</button>
+  <p id="resul"></p>
 <script>
   /*
   =====================================
@@ -108,13 +115,25 @@ butto.addEventListener("click", function () {
   "Hello, [name]!" from input
   */
 
+  let input = document.getElementById("nameInput");
+    let butt = document.getElementById("greetBtn");
+//    let result = document.getElementById("result");
+
+    butt.addEventListener("click", function() {
+      let name = input.value;
+      result.textContent = "Hello " + name;
+    });
   /*
   🧩 Assignment 8: Change Color
 
   Create a button
   When clicked, change the background color of the page
   */
+  let but = document.getElementById("colorBtn");
 
+    but.addEventListener("click", function() {
+      document.body.style.backgroundColor = "purple";
+    });
   // Day 5 — Mini Game & Review
 
   /*
@@ -123,7 +142,16 @@ butto.addEventListener("click", function () {
   Create one question with 2 answer buttons
   Show "Correct!" or "Wrong!" when clicked
   */
+  let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let result = document.getElementById("result");
 
+    btn1.addEventListener("click", () => {
+      result.textContent = "Wrong!";
+    });
+    btn2.addEventListener("click", () => {
+      result.textContent = "Correct";
+    });
   /*
   🧩 Assignment 10: Explain Out Loud
 
