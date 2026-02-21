@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 17 — DOM + Events (Assignments)</title>
+</head>
+<body>
+  <h1 id="title">Hello World</h1>
+  <p class="text">This is a paragraph</p>
+  <button onclick="fun()" id="btn">Click Me</button>
+  <button onclick="fun2()" id="btn2">Click Me</button>
+  <button onclick="fun3()" id="btn3">Click Me</button>
+<h1>🟢 Week 17 — DOM + Events</h1>
+<p>Open the console (F12). Read and code inside the script.</p>
+  <button id="btn4">Click Me</button>
+  <span id="count">0</span>
+
+<script>
+  /*
+  =====================================
+  WEEK 17 GOAL
+  =====================================
+  Learn how to interact with the page,
+  update elements, and handle user actions.
+  */
+
+  // Day 1 — Selecting Elements
+
+  /*
+  🧩 Assignment 1: Grab Elements
+
+  Create HTML elements: h1, p, button
+  Use JavaScript to select them
+  (document.querySelector / getElementById)
+  Log the elements.
+  */
+let title = document.getElementById("title");
+let paragraph = document.querySelector(".text");
+let button = document.querySelector("#btn");
+let button2 = document.querySelector("#btn2");
+let button3 = document.querySelector("#btn3");
+console.log(title);
+console.log(paragraph);
+console.log(button);
+  /*
+  🧩 Assignment 2: Change Content
+
+  Select a paragraph
+  Change its text using innerText or innerHTML
+  */
+title.innerText = "i doit hhhhhhhhhhhhhh"
+  // Day 2 — Event Listeners
+  /*
+  🧩 Assignment 3: Button Click
+
+  Create a button
+  Add a click event listener
+  Log "Button clicked!" when pressed
+  */
+function fun () {
+  console.log("Button clicked");
+}
+  /*
+  🧩 Assignment 4: Multiple Buttons
+
+  Create 2 buttons
+  Each button logs a different message
+  when clicked
+  */
+function fun2 () {
+  alert ("chawcha3")
+}
+function fun3 () {
+  alert ("jojo")
+}
+  // Day 3 — Interactive Mini Projects
+
+  /*
+  🧩 Assignment 5: Click Counter
+
+  Create a button and a display span
+  Increment the counter each click
+  Show the result in the span
+  */
+let butto = document.getElementById("btn4");
+let span = document.getElementById("count");
+
+let counter = 0;
+
+butto.addEventListener("click", function () {
+  counter++;
+  span.textContent = counter;
+});
+  /*
+  🧩 Assignment 6: Hide & Show
+
+  Create a div and a toggle button
+  When button is clicked, hide/show the div
+  */
+
+  // Day 4 — Forms & Input
+
+  /*
+  🧩 Assignment 7: Name Input
+
+  Create an input field and a button
+  When clicking the button, display:
+  "Hello, [name]!" from input
+  */
+
+  /*
+  🧩 Assignment 8: Change Color
+
+  Create a button
+  When clicked, change the background color of the page
+  */
+
+  // Day 5 — Mini Game & Review
+
+  /*
+  🧩 Assignment 9: Simple Quiz
+
+  Create one question with 2 answer buttons
+  Show "Correct!" or "Wrong!" when clicked
+  */
+
+  /*
+  🧩 Assignment 10: Explain Out Loud
+
+  - What is DOM?
+  - How do event listeners work?
+  - Difference between innerText and innerHTML?
+  */
+</script>
+
+</body>
+</html>
